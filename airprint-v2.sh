@@ -2,7 +2,7 @@
 # airprint-v2.sh — Proxmox host bootstrap.
 #
 # One-liner usage (run on the Proxmox node, as root):
-#   bash -c "$(curl -fsSL https://raw.githubusercontent.com/<USER>/airprint-v2/main/airprint-v2.sh)"
+#   bash -c "$(curl -fsSL https://raw.githubusercontent.com/jensdufour/PUB-AirPrint/main/airprint-v2.sh)"
 #
 # What it does:
 #   1. Validates Proxmox + root.
@@ -16,9 +16,9 @@
 
 # ---- where this script lives & where to fetch the rest from ---------------
 # Override REPO_URL/REPO_BRANCH if you forked the repo or work off a branch.
-: "${AIRPRINT_REPO_URL:=https://github.com/jensdufour/airprint-v2.git}"
+: "${AIRPRINT_REPO_URL:=https://github.com/jensdufour/PUB-AirPrint.git}"
 : "${AIRPRINT_REPO_BRANCH:=main}"
-: "${AIRPRINT_REPO_RAW:=https://raw.githubusercontent.com/jensdufour/airprint-v2/${AIRPRINT_REPO_BRANCH}}"
+: "${AIRPRINT_REPO_RAW:=https://raw.githubusercontent.com/jensdufour/PUB-AirPrint/${AIRPRINT_REPO_BRANCH}}"
 
 # ---- bootstrap: source common.sh whether running locally or via curl-bash --
 if __self_dir="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" 2>/dev/null && pwd)"; then
